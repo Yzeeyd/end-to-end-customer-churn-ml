@@ -9,7 +9,8 @@ import joblib
 import os
 
 # Local lib
-from data import CleanData
+from src.data import CleanData
+
 from src.config import (
     FILE_PATH,
     ARTIFACT_PATH,

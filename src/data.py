@@ -8,11 +8,6 @@ def CleanData(
         col_target:str
         )  -> tuple[pd.DataFrame, pd.Series]:
 
-    """
-    
-    """
-
-
     # Read Data 
     df = pd.read_csv(FilePath)
 
