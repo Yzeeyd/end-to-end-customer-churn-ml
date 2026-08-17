@@ -12,7 +12,7 @@ https://cfglgiwl5xr6rr2dx7h26ibf4q0gvtau.lambda-url.us-east-1.on.aws/ui/
 **API Docs:**  
 https://cfglgiwl5xr6rr2dx7h26ibf4q0gvtau.lambda-url.us-east-1.on.aws/docs
 
-> The application runs on AWS Lambda, so the first request after inactivity may take longer because of a cold start.
+> The application runs on AWS Lambda, so the first request after inactivity may take 2-4 minutes because of a cold start.
 
 ---
 
