@@ -19,8 +19,11 @@ def CleanData(
         # b) Make Sure all numerical data is numerical and fill the null value
     for col in col_num:
         df[col] = pd.to_numeric(df[col])
-        df["Total Charges"] = (df["Tenure Months"] * df["Monthly Charges"])
+    
+    mask = df["Total Charges"].isna()
+    df.loc[mask, "Total Charges"] = ( df.loc[mask, "Tenure Months"] * df.loc[mask, "Monthly Charges"] )
 
+    
     x = df.drop(col_target,axis=1)
     y = df[col_target]
     return x,y
