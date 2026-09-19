@@ -21,6 +21,9 @@ def home():
         "message": "Customer Churn Prediction API is running"
     }
 
+@app.get("/health")
+def health():
+    raise Exception("Simulated health failure")
 
 @app.post("/predict")
 def predict(customer: CustomerInput):
@@ -38,6 +41,11 @@ def predict(customer: CustomerInput):
     )
 
     return result
+
+@app.get("/version")
+def version():
+    return {"version": "1.2"}
+
 
 ui = create_ui()
 
