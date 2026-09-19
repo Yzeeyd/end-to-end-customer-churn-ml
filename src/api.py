@@ -21,6 +21,9 @@ def home():
         "message": "Customer Churn Prediction API is running"
     }
 
+@app.get("/health")
+def health():
+    return("health")
 
 @app.post("/predict")
 def predict(customer: CustomerInput):
@@ -38,6 +41,7 @@ def predict(customer: CustomerInput):
     )
 
     return result
+
 
 ui = create_ui()
 
