@@ -23,7 +23,7 @@ def home():
 
 @app.get("/health")
 def health():
-    raise Exception("Simulated health failure")
+    return("health")
 
 @app.post("/predict")
 def predict(customer: CustomerInput):
@@ -41,10 +41,6 @@ def predict(customer: CustomerInput):
     )
 
     return result
-
-@app.get("/version")
-def version():
-    return {"version": "1.2"}
 
 
 ui = create_ui()
