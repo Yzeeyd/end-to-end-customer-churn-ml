@@ -3,13 +3,15 @@ kind: Service
 
 metadata:
   name: churn-api-service
+  namespace: churn-ml
 
 spec:
   selector:
     app: churn-api
 
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 80
       targetPort: 8000
 

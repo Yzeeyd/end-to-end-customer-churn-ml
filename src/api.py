@@ -23,7 +23,7 @@ def home():
 
 @app.get("/health")
 def health():
-    return("health")
+    return {"status": "ok"}
 
 @app.post("/predict")
 def predict(customer: CustomerInput):
