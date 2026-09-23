@@ -49,10 +49,10 @@ jobs:
   docker:
     name: Docker
     runs-on: ubuntu-latest
-
+    environment: action env
     needs:
       - test-and-build
-
+    
     permissions:
       contents: read
       packages: write
