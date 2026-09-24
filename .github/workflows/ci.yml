@@ -49,9 +49,7 @@ jobs:
   docker:
     name: Docker
     runs-on: ubuntu-latest
-
-    environment: Deployment Release
-
+    
     needs:
       - test-and-build
     
